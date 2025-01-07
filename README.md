@@ -1,4 +1,4 @@
-# React E-Commerce
+# Next E-Commerce
 
 ## [Preview](https://ecommerce-next-olive-mu.vercel.app/)
 
