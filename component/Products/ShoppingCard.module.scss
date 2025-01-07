@@ -1,0 +1,108 @@
+.select {
+    margin-top: 8.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .cateItems {
+        text-transform: capitalize;
+        background: #4b4b4b27;
+        color: #383838c7;
+        padding: 0.7rem 2rem;
+        margin: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.3rem;
+        font-size: 1.4rem;
+        font-weight: bold;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+        &:hover {
+            background: rgba(18, 18, 255, 0.684);
+            color: #fff;
+        }
+    }
+}
+
+.maintitle {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .span {
+        color: rgba(18, 18, 255, 0.684);
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+    }
+
+    .main {
+        font-weight: lighter;
+    }
+}
+
+.products_Wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    background: url('/path-to-your-product-background.jpg') no-repeat center/cover;
+    /* Add a background image */
+    border-radius: 0.5rem;
+    text-align: center;
+    height: 25rem;
+    width: 25rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    img {
+        width: 13rem;
+        height: 13rem;
+        transition: transform 0.3s ease;
+    }
+
+    .Product_detail {
+        padding: 0.5rem;
+        margin: 1rem;
+        text-align: start;
+
+        p {
+            padding: 0.3rem 0;
+        }
+
+        p:nth-child(1) {
+            color: #000;
+            font-size: 1.7rem;
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+
+        p:nth-child(2) {
+            color: rgba(18, 18, 255, 0.684);
+            font-weight: 500;
+        }
+
+        p:nth-child(3) {
+            color: rgba(0, 0, 0, 0.713);
+            font-size: 1.2rem;
+        }
+    }
+}
+
+
+@media (max-width: 600px) {
+    .select {
+        .cateItems {
+            font-size: 1.2rem;
+            padding: .7rem 3rem;
+            margin: .5rem .3rem;
+        }
+    }
+}

@@ -1,0 +1,176 @@
+// @use '../scss/Color_root.scss' as *;
+
+.cart_Item_Container {
+    display: flex;
+    flex-direction: column;
+    margin: 10rem auto;
+    width: 80%;
+
+    .cartTitle {
+        font-size: 1.6rem;
+
+        h1 {
+            font-weight: lighter;
+            color: #000000d5;
+        }
+    }
+
+    .cartTitle ::before {
+        content: '|';
+        font-weight: bold;
+        position: relative;
+        bottom: 0.3rem;
+        right: 0.2rem;
+        color: rgba(132, 176, 1, 0.823);
+    }
+
+    .cartNaming {
+        display: flex;
+        margin: 1rem 0;
+        padding: 1rem 0;
+        color: rgba(0, 0, 0, 0.523);
+        justify-content: space-between;
+        border-bottom: .2rem solid rgba(192, 192, 192, 0.71);
+
+        p {
+            margin-left: 0.5rem;
+        }
+    }
+
+    .cartItemslist {
+        border-bottom: .2rem solid rgba(192, 192, 192, 0.71);
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            height: 7.7rem;
+            width: 7rem;
+            padding: 1rem 1rem;
+        }
+
+        .cartDetail {
+            display: flex;
+            align-items: center;
+            width: 76%;
+            justify-content: space-between;
+        }
+
+        .flex {
+            display: flex;
+
+            .addBtn {
+                border: none;
+                background: none;
+                cursor: pointer;
+
+                &:hover {
+                    border-radius: 5rem;
+                    background: rgba(132, 176, 1, 0.2);
+                    transition: transform 0.3s ease;
+                }
+            }
+        }
+
+        .addRemove {
+            background: none;
+            border-radius: 1rem;
+            color: rgba(251, 14, 14, 0.686);
+            font-weight: bold;
+            border: none;
+            margin-right: 1.5rem;
+            font-size: 2rem;
+            width: 4rem;
+            cursor: pointer;
+
+            &:hover {
+                background: rgba(132, 176, 1, 0.2);
+                transition: background 0.3s ease;
+            }
+        }
+
+        .qty {
+            margin: 0 1rem;
+        }
+    }
+
+    .continueBtn {
+        width: 16rem;
+        height: 3rem;
+        color: #fff;
+        border: none;
+        background: rgba(18, 18, 255, 0.684);
+        border-radius: .4rem;
+        font-size: 1.1rem;
+        cursor: pointer;
+
+        &:hover {
+            background: lighten(rgba(18, 18, 255, 0.684), 10%);
+            transition: background 0.3s ease;
+        }
+    }
+
+    .cartTotal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 1rem 2rem;
+        width: 25rem;
+        font-size: 1.3rem;
+
+        span {
+            color: #000000bb;
+        }
+
+        hr {
+            width: 14rem;
+        }
+
+        p {
+            position: relative;
+            bottom: 1.6rem;
+            left: 14rem;
+            width: 5.5rem;
+        }
+
+        .clearBtn {
+            width: 22rem;
+            height: 3rem;
+            color: #fff;
+            border: none;
+            background: rgba(251, 14, 14, 0.686);
+            border-radius: .4rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+
+            &:hover {
+                transition: background 0.3s ease;
+            }
+
+            span {
+                color: #fff;
+                position: relative;
+                top: 0.1rem;
+                left: 0.1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .cart_Item_Container {
+        width: 100%;
+        padding: 0 1rem;
+
+        .cartTotal {
+            font-size: 1.3rem;
+
+            .clearBtn {
+                width: 20rem;
+            }
+        }
+
+        .cartNaming {
+            font-size: 1.3rem;
+        }
+    }
+}
